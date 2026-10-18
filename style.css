@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #20201f; background: #fafaf8; font: 15px/1.5 system-ui, sans-serif; }
+main { max-width: 1240px; margin: auto; padding: 48px 32px 64px; }
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+h1 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -.6px; }
+a { color: inherit; text-decoration: none; }
+header a { color: #6a6a65; font-size: 14px; }
+header a:hover { color: #20201f; }
+.projects { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px 24px; }
+.project { min-width: 0; border-radius: 8px; }
+.preview { aspect-ratio: 8 / 5; overflow: hidden; border: 1px solid #e4e4df; border-radius: 8px; background: #f0f0ed; transition: border-color .15s; }
+.preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.name { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 10px; font-weight: 500; }
+.name span { color: #92928a; font-size: 17px; }
+.project:hover .preview { border-color: #909089; }
+.project:hover .name span { color: #20201f; }
+a:focus-visible { outline: 2px solid #305ea8; outline-offset: 6px; }
+@media (max-width: 1050px) { .projects { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { main { padding: 30px 22px 44px; } .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; } }
+@media (max-width: 440px) { main { padding: 26px 18px 40px; } header { margin-bottom: 26px; } .projects { grid-template-columns: 1fr; } }
